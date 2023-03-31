@@ -1,14 +1,12 @@
 import React from 'react'
 import { MOCK_PROJECTS } from './MockProjects';
+import ProjectList from './ProjectList';
 
 function ProjectsPage(){
-
-    let textFromJson = JSON.stringify(MOCK_PROJECTS);
-
     return (
         <>
         <h1>Projects</h1>
-        <pre>{textFromJson}</pre>
+        <ProjectList projects={MOCK_PROJECTS} />
         </>
     );
 }
