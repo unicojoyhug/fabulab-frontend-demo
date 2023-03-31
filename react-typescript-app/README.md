@@ -3,6 +3,14 @@
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - This project will follow https://handsonreact.com/docs/labs/ts/CreatingNewProject
 
+## Installations I ran
+```
+
+npm install mini.css@3.0.1
+```
+
+
+
 
 ## Available Scripts
 
