@@ -9,9 +9,6 @@
 npm install mini.css@3.0.1
 ```
 
-
-
-
 ## Available Scripts
 
 In the project directory, you can run:
