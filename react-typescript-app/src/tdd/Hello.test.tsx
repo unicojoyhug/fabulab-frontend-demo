@@ -44,33 +44,32 @@ describe('getQuestionMarks', () => {
     });
 });
 
+// test Hello to return expected element
 describe('Hello', () => {
-    // test when enthusiasmLevel is 0, throw error
-    test('when enthusiasmLevel is 0, throw error', () => {
-        const name = "test";
-        const enthusiasmLevel = 0;
-        expect(() => Hello({ name, enthusiasmLevel })).toThrow();
-    });
-
-    // test when enthusiasmLevel is positive, return expected element
-    test('when enthusiasmLevel is positive, return expected element', () => {
+    // test when the enthusiasmLevel is positive, return expected element
+    test('when the enthusiasmLevel is positive, return expected element', () => {
         const name = "test";
         const enthusiasmLevel = 1;
         const test = Hello({ name, enthusiasmLevel });
-        expect(name + "!").toEqual(test);
+        expect(expectedResult("Hello test! How are you doing?")).toEqual(
+            test
+        );
     });
-
-    // test enthousiasmLevel is undefined, throw error
-    test('enthousiasmLevel is undefined, throw error', () => {
-        const name = "test";
-        expect(() => Hello({ name })).toThrow();
-    });
-
-    // test when enthusiasmLevel is 2, returns two exclamation marks
-    test('when enthusiasmLevel is 2, returns two exclamation marks', () => {
+    // test when the enthusiasmLevel is 2, return expected element
+    test('when the enthusiasmLevel is 2, return expected element', () => {
         const name = "test";
         const enthusiasmLevel = 2;
         const test = Hello({ name, enthusiasmLevel });
-        expect(name + "!!").toEqual(test);
+        expect(expectedResult("Hello test!! How are you doing??")).toEqual(
+            test
+        );
     });
 });
+
+function expectedResult(expectedResult: string): unknown {
+    return <div className="hello">
+        <div className="greeting">
+            {expectedResult}
+        </div>
+    </div>;
+}

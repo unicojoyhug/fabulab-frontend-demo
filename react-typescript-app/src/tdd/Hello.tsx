@@ -5,14 +5,11 @@ export interface Props {
 }
 
 function Hello({ name, enthusiasmLevel }: Props) {
-  return name + getExclamationMarks(enthusiasmLevel);
-}
-
-function Greeting({ name, enthusiasmLevel }: Props) {
+  let greetings = "Hello " +  name + getExclamationMarks(enthusiasmLevel) + " How are you doing"+ getQuestionMarks(enthusiasmLevel);
   return (
     <div className="hello">
       <div className="greeting">
-        Hello {name + getExclamationMarks(enthusiasmLevel)}, how are you doing {getQuestionMarks(enthusiasmLevel)}
+      {greetings}
       </div>
     </div>
   );
@@ -36,4 +33,4 @@ function getMarks(marks: string, enthusiasmLevel?: number) {
   return marks.repeat(enthusiasmLevel);
 }
 
-export { getExclamationMarks, getQuestionMarks, Greeting, Hello };
+export { getExclamationMarks, getQuestionMarks, Hello };
